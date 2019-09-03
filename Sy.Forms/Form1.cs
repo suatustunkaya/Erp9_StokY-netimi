@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Sy.Forms.Auth; // LoginForm için eklettik
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace Sy.Forms
 {
     public partial class Form1 : Form
@@ -15,6 +17,18 @@ namespace Sy.Forms
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void btnGirisYap_Click(object sender, EventArgs e)
+        {
+            LoginForm frm = new LoginForm();
+            frm.ShowDialog();
+        }
+
+        private void btnKayitOl_Click(object sender, EventArgs e)
+        {
+            RegisterForm frm = new RegisterForm();
+            frm.ShowDialog();
         }
     }
 }
