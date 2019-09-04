@@ -1,6 +1,7 @@
 ﻿using Sy.Bussiness.Repository;
 using Sy.Core.ComplexTypes;
 using Sy.Core.Entities;
+using Sy.Core.Enums;
 using Sy.Forms.Auth; // LoginForm için eklettik
 using System;
 using System.Collections.Generic;
@@ -25,6 +26,8 @@ namespace Sy.Forms
             _productRepo = new Repository<Product, Guid>();
             gbGiris.Visible = true;
             lblGirisBilgi.Visible = false;
+            menuStrip1.Visible = false;
+
         }
 
         private void btnGirisYap_Click(object sender, EventArgs e)
@@ -41,6 +44,12 @@ namespace Sy.Forms
                 gbGiris.Visible = false;
                 lblGirisBilgi.Visible = true;
                 lblGirisBilgi.Text = StockSettings.UserInfo.Display;
+                menuStrip1.Visible = true;
+            }
+            if (StockSettings.UserInfo.ApplicationRole == ApplicationRole.Customer)
+            {
+                ürünlerToolStripMenuItem.Visible = false;
+                müşterilerToolStripMenuItem.Visible = false;
             }
         }
 
@@ -50,6 +59,16 @@ namespace Sy.Forms
             frm.ShowDialog();
         }
 
+        private void ürünlerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ProductForm frm = new ProductForm();
+            frm.Show();
+        }
 
+        private void siparişlerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OrderForm frm = new OrderForm();
+            frm.Show();
+        }
     }
 }

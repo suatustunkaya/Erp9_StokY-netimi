@@ -121,6 +121,7 @@
             this.lstUrunler.Name = "lstUrunler";
             this.lstUrunler.Size = new System.Drawing.Size(296, 342);
             this.lstUrunler.TabIndex = 7;
+            this.lstUrunler.KeyUp += new System.Windows.Forms.KeyEventHandler(this.lstUrunler_KeyUp);
             // 
             // lblBİlgi
             // 

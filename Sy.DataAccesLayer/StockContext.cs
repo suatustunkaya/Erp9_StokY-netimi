@@ -20,7 +20,7 @@ namespace Sy.DataAccesLayer
             // Audit işlemleri
             if (StockSettings.UserInfo != null)
             {
-                var selectedEntryLİst=ChangeTracker.Entries().Where(x => x.Entity is AuditBase && x.State == EntityState.Added);
+                var selectedEntryLİst = ChangeTracker.Entries().Where(x => x.Entity is AuditBase && x.State == EntityState.Added);
                 foreach (var item in selectedEntryLİst)
                 {
                     ((AuditBase)item.Entity).CreatedUser = StockSettings.UserInfo.Email;
@@ -30,12 +30,13 @@ namespace Sy.DataAccesLayer
                 foreach (var item in selectedEntryLİst)
                 {
                     ((AuditBase)item.Entity).UpdatedUser = StockSettings.UserInfo.Email;
-                    ((AuditBase)item.Entity).UpdatedDate= DateTime.Now;
+                    ((AuditBase)item.Entity).UpdatedDate = DateTime.Now;
                 }
             }
             return base.SaveChanges();
         }
         public virtual DbSet<Product> Products { get; set; }
         public virtual DbSet<Client> Clients { get; set; }
+        public virtual DbSet<ProductStockAction> ProductStockActions { get; set; }
     }
 }

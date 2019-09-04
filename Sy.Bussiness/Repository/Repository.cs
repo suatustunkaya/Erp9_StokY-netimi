@@ -8,6 +8,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using Sy.Core.Abstracts;
+using Sy.Core.Entities;
 using Sy.DataAccesLayer;
 
 namespace Sy.Bussiness.Repository
@@ -38,6 +39,11 @@ namespace Sy.Bussiness.Repository
             _table.Add(entity);
             this.Save();
             return entity.Id;
+        }
+
+        public void Insert(ProductStockAction productStockAction)
+        {
+            throw new NotImplementedException();
         }
 
         public IQueryable<TEntity> Query(Expression<Func<TEntity, bool>> predicate = null)

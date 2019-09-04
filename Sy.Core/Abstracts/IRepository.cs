@@ -4,6 +4,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
+using Sy.Core.Entities;
 
 namespace Sy.Core.Abstracts
 {
@@ -15,5 +16,6 @@ namespace Sy.Core.Abstracts
         int Delete(TEntity entity);
         int Save();
         IQueryable<TEntity> Query(Expression<Func<TEntity, bool>> Predicate = null);
+        void Insert(ProductStockAction productStockAction);
     }
 }
