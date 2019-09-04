@@ -12,12 +12,12 @@ namespace Sy.Core.Abstracts
 
         
         [StringLength(50)]
-        public string CeratedUSer { get; set; }
+        public string CreatedUser { get; set; }
         public DateTime CreatedDate { get; set; } = DateTime.Now; // Constructer yazmaya gerek kalmadan burada eşitleme yaptık
 
         [StringLength(50)]
         public string UpdatedUser { get; set; }
-        public DateTime? UpdateDate { get; set; } // Boş geçilemeyecği için ? işareti ekledik
+        public DateTime? UpdatedDate { get; set; } // Boş geçilemeyecği için ? işareti ekledik
 
 
     }

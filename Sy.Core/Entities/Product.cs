@@ -22,7 +22,7 @@ namespace Sy.Core.Entities
         public string ProductName { get; set; }
 
         [Range(0, 999999)]
-        public int Decimal { get; set; }
+        public  decimal UnitPrice { get; set; }
 
         public int CriticStock { get; set; } = 10;
     }
