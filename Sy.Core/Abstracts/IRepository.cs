@@ -16,6 +16,5 @@ namespace Sy.Core.Abstracts
         int Delete(TEntity entity);
         int Save();
         IQueryable<TEntity> Query(Expression<Func<TEntity, bool>> Predicate = null);
-        void Insert(ProductStockAction productStockAction);
     }
 }

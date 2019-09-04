@@ -40,11 +40,7 @@ namespace Sy.Bussiness.Repository
             this.Save();
             return entity.Id;
         }
-
-        public void Insert(ProductStockAction productStockAction)
-        {
-            throw new NotImplementedException();
-        }
+        
 
         public IQueryable<TEntity> Query(Expression<Func<TEntity, bool>> predicate = null)
         {

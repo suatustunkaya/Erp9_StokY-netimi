@@ -29,7 +29,9 @@ namespace Sy.Forms
 
         private void ListeyiDoldur(string search = "")
         {
-            var data = _productRepo.Query(x => x.ProductName.Contains(search)).Select(x => new ProductViewModel()
+            var data = _productRepo.Query(x => x.ProductName.Contains(search))
+                .ToList()
+                .Select(x => new ProductViewModel()
             {
                 Id = x.Id,
                 UnitPrice = x.UnitPrice,
@@ -60,7 +62,7 @@ namespace Sy.Forms
         {
             try
             {
-                _productRepo.Insert(new ProductStockAction()
+                _productStockAction.Insert(new ProductStockAction()
                 {
                     ProductId = seciliUrun.Id,
                     Quantity = Convert.ToInt32(nudEklenecekMiktar.Value),
@@ -68,7 +70,7 @@ namespace Sy.Forms
                     StockActionType = StockActionType.Incoming
                 });
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
                 throw;
