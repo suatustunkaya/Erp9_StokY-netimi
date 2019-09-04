@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.gbGiris = new System.Windows.Forms.GroupBox();
-            this.btnGirisYap = new System.Windows.Forms.Button();
             this.btnKayitOl = new System.Windows.Forms.Button();
+            this.btnGirisYap = new System.Windows.Forms.Button();
             this.lblGirisBilgi = new System.Windows.Forms.Label();
             this.gbGiris.SuspendLayout();
             this.SuspendLayout();
@@ -46,16 +46,6 @@
             this.gbGiris.TabStop = false;
             this.gbGiris.Text = "groupBox1";
             // 
-            // btnGirisYap
-            // 
-            this.btnGirisYap.Location = new System.Drawing.Point(22, 28);
-            this.btnGirisYap.Name = "btnGirisYap";
-            this.btnGirisYap.Size = new System.Drawing.Size(92, 40);
-            this.btnGirisYap.TabIndex = 0;
-            this.btnGirisYap.Text = "Giriş Yap";
-            this.btnGirisYap.UseVisualStyleBackColor = true;
-            this.btnGirisYap.Click += new System.EventHandler(this.btnGirisYap_Click);
-            // 
             // btnKayitOl
             // 
             this.btnKayitOl.Location = new System.Drawing.Point(120, 28);
@@ -65,6 +55,16 @@
             this.btnKayitOl.Text = "Kayıt Ol";
             this.btnKayitOl.UseVisualStyleBackColor = true;
             this.btnKayitOl.Click += new System.EventHandler(this.btnKayitOl_Click);
+            // 
+            // btnGirisYap
+            // 
+            this.btnGirisYap.Location = new System.Drawing.Point(22, 28);
+            this.btnGirisYap.Name = "btnGirisYap";
+            this.btnGirisYap.Size = new System.Drawing.Size(92, 40);
+            this.btnGirisYap.TabIndex = 0;
+            this.btnGirisYap.Text = "Giriş Yap";
+            this.btnGirisYap.UseVisualStyleBackColor = true;
+            this.btnGirisYap.Click += new System.EventHandler(this.btnGirisYap_Click);
             // 
             // lblGirisBilgi
             // 

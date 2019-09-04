@@ -17,7 +17,11 @@ namespace Sy.Bussiness.Repository
         private readonly StockContext _context;
         private readonly DbSet<TEntity> _table;
 
-
+        public Repository()
+        {
+            this._context = new StockContext();
+            this._table = _context.Set<TEntity>();
+        }
         public int Delete(TEntity entity)
         {
             _table.Remove(entity);

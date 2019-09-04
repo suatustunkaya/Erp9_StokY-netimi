@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.txxAd = new System.Windows.Forms.TextBox();
+            this.txtAd = new System.Windows.Forms.TextBox();
             this.txtSoyad = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtSifre = new System.Windows.Forms.TextBox();
@@ -49,12 +49,12 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Ad";
             // 
-            // txxAd
+            // txtAd
             // 
-            this.txxAd.Location = new System.Drawing.Point(102, 29);
-            this.txxAd.Name = "txxAd";
-            this.txxAd.Size = new System.Drawing.Size(157, 20);
-            this.txxAd.TabIndex = 1;
+            this.txtAd.Location = new System.Drawing.Point(102, 29);
+            this.txtAd.Name = "txtAd";
+            this.txtAd.Size = new System.Drawing.Size(157, 20);
+            this.txtAd.TabIndex = 0;
             // 
             // txtSoyad
             // 
@@ -68,7 +68,7 @@
             this.txtEmail.Location = new System.Drawing.Point(102, 81);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(157, 20);
-            this.txtEmail.TabIndex = 1;
+            this.txtEmail.TabIndex = 2;
             // 
             // txtSifre
             // 
@@ -76,7 +76,7 @@
             this.txtSifre.Name = "txtSifre";
             this.txtSifre.PasswordChar = '*';
             this.txtSifre.Size = new System.Drawing.Size(157, 20);
-            this.txtSifre.TabIndex = 1;
+            this.txtSifre.TabIndex = 3;
             // 
             // label2
             // 
@@ -121,6 +121,7 @@
             // 
             // RegisterForm
             // 
+            this.AcceptButton = this.btnKaydol;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(281, 249);
@@ -128,7 +129,7 @@
             this.Controls.Add(this.txtSifre);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.txtSoyad);
-            this.Controls.Add(this.txxAd);
+            this.Controls.Add(this.txtAd);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -144,7 +145,7 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txxAd;
+        private System.Windows.Forms.TextBox txtAd;
         private System.Windows.Forms.TextBox txtSoyad;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.TextBox txtSifre;

@@ -28,22 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnKaydol = new System.Windows.Forms.Button();
+            this.btnGirisYap = new System.Windows.Forms.Button();
             this.txtSifre = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // btnKaydol
+            // btnGirisYap
             // 
-            this.btnKaydol.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnKaydol.Location = new System.Drawing.Point(106, 91);
-            this.btnKaydol.Name = "btnKaydol";
-            this.btnKaydol.Size = new System.Drawing.Size(148, 68);
-            this.btnKaydol.TabIndex = 7;
-            this.btnKaydol.Text = "Giriş";
-            this.btnKaydol.UseVisualStyleBackColor = true;
+            this.btnGirisYap.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnGirisYap.Location = new System.Drawing.Point(106, 91);
+            this.btnGirisYap.Name = "btnGirisYap";
+            this.btnGirisYap.Size = new System.Drawing.Size(148, 68);
+            this.btnGirisYap.TabIndex = 7;
+            this.btnGirisYap.Text = "Giriş";
+            this.btnGirisYap.UseVisualStyleBackColor = true;
+            this.btnGirisYap.Click += new System.EventHandler(this.btnGirisYap_Click);
             // 
             // txtSifre
             // 
@@ -85,7 +86,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(277, 179);
-            this.Controls.Add(this.btnKaydol);
+            this.Controls.Add(this.btnGirisYap);
             this.Controls.Add(this.txtSifre);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.label4);
@@ -100,7 +101,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnKaydol;
+        private System.Windows.Forms.Button btnGirisYap;
         private System.Windows.Forms.TextBox txtSifre;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label label4;
